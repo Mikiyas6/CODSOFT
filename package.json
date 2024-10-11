@@ -1,0 +1,23 @@
+{
+  "name": "codsoft-calculator",
+  "version": "1.0.0",
+  "description": "A small Calculator App",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "default": "index.html --dist-dir ./dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mikiyas6/CODSOFT.git"
+  },
+  "author": "Mikiyas Teowodroes",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mikiyas6/CODSOFT/issues"
+  },
+  "homepage": "https://github.com/Mikiyas6/CODSOFT#readme",
+  "dependencies": {
+    "parcel": "^2.12.0"
+  }
+}
