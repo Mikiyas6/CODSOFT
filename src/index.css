@@ -1,0 +1,94 @@
+:root {
+  --primary: hsl(0, 0%, 20%);
+  --secondary: hsl(45, 100%, 50%);
+  --light-gray: rgb(229, 228, 226);
+  --very-light-gray: hsl(0, 0%, 83%);
+  --white: hsl(100, 100%, 100%);
+}
+@font-face {
+  font-family: "Digital7Mono";
+  src: url("../src/assets/fonts//digital-7.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Digital7Mono";
+  position: relative;
+  height: 100vh;
+  background: var(--light-gray);
+}
+.calculator {
+  background: var(--primary);
+  width: 34rem;
+  height: 48.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 20px;
+  padding: 1rem;
+}
+.screen {
+  width: 30rem;
+  height: 8rem;
+  position: relative;
+  margin: auto auto 1rem auto;
+}
+.result {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  font-size: 5rem;
+  color: var(--white);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.grid {
+  width: 30rem;
+  display: grid;
+  margin: auto;
+  gap: 1.5rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+.btn {
+  width: 100%;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  background: var(--primary);
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  cursor: pointer;
+  font-size: 2.5rem;
+  border-radius: 5px;
+}
+.btns button:nth-child(-n + 3) {
+  color: var(--very-light-gray);
+}
+.btn--zero {
+  grid-column: 1 / span 2;
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 2.5rem;
+}
+.btn--operation {
+  color: var(--secondary);
+}
